@@ -29,7 +29,7 @@ app.get('', (req, res) => {
 app.get("/about", (req, res) => {
     res.render('about', {
         name: "zlot bobot",
-        title: 'about'
+        title: 'About'
     });
 });
 
