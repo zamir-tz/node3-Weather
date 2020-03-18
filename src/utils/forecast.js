@@ -10,11 +10,12 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
             callback("Incorrect location", undefined);
         } else {
-            callback(undefined, body.daily.data[0].summary + " it is currenly " + body.currently.temperature + " degrees out. Temprerature low is" + body.daily.data[0].temperatureLow + "temperature high is" + body.daily.data[0].temperatureHigh + ". There is a " + body.currently.precipProbability + "% chance of rain.");
+            callback(undefined, body.daily.data[0].summary + " it is currenly " + body.currently.temperature + " degrees out. Temprerature low is " + body.daily.data[0].temperatureLow + "temperature high is " + body.daily.data[0].temperatureHigh + ". There is a " + body.currently.precipProbability + "% chance of rain.");
         }
 
     })
 
 }
+
 
 module.exports = forecast;
